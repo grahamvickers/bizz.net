@@ -1875,6 +1875,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
@@ -1902,10 +1903,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Logout: _partials_logout_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  // data() {
-  //     return{
-  //     }
-  // },
   mounted: function mounted() {
     //console.log(this.user);
     this.$store.commit('user', this.user); //console.log(this.$store.user);
@@ -1943,7 +1940,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -38615,7 +38611,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h2", [_vm._v("IM the create page")]),
+      _c("h2", [_vm._v("Manage or Create a new Listing")]),
       _vm._v(" "),
       _c("p", [_vm._v("super fun")])
     ])
@@ -38654,11 +38650,11 @@ var render = function() {
         _vm._l(_vm.listings, function(listing) {
           return _c(
             "div",
-            { key: listing, staticClass: "listingCon" },
+            { key: listing.id, staticClass: "listingCon" },
             [
               _c("div", {
                 staticClass: "image",
-                style: "background:url(./storage/" + listing.img + ")"
+                style: "background:url(./images/" + listing.img + ")"
               }),
               _vm._v(" "),
               _c("h3", [_vm._v(_vm._s(listing.name))]),
@@ -38667,9 +38663,7 @@ var render = function() {
               _vm._v(" "),
               _c("p", [_vm._v(_vm._s(listing.address))]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(listing.profit))]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(listing.income))]),
+              _c("p", [_vm._v("Profit Margin: " + _vm._s(listing.profit))]),
               _vm._v(" "),
               _c(
                 "router-link",
@@ -56586,6 +56580,10 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     name: 'home',
     component: _components_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
+    path: '/create',
+    name: 'create',
+    component: _components_Create_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }, {
     path: '/profile',
     name: 'profile',
     component: _components_Profile_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -56593,10 +56591,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     path: '/:id',
     name: 'listing',
     component: _components_Listing_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }, {
-    path: '/create',
-    name: 'create',
-    component: _components_Create_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }]
 }));
 

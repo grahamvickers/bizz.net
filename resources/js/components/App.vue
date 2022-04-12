@@ -27,6 +27,7 @@
                 </router-link>
             </nav>
             <div class="pt-3 pb-3">
+                
                 <router-view v-bind:listings="theListings" />
 
             </div>
@@ -65,11 +66,6 @@
         components: {
             Logout
         },
-
-        // data() {
-        //     return{
-        //     }
-        // },
 
         mounted() {
             //console.log(this.user);

@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Home from '../components/Home.vue';
 import Profile from '../components/Profile.vue';
 import Listing from '../components/Listing.vue';
-import CreateListing from '../components/Create.vue';
+import Create from '../components/Create.vue';
 
 Vue.use(Router);
 
@@ -15,6 +15,11 @@ export default new Router({
             component: Home
         }, 
         {
+            path: '/create',
+            name: 'create',
+            component: Create
+        }, 
+        {
             path: '/profile',
             name: 'profile',
             component: Profile
@@ -23,11 +28,6 @@ export default new Router({
             path: '/:id',
             name: 'listing',
             component: Listing
-        }, 
-        {
-            path: '/create',
-            name: 'create',
-            component: CreateListing
         }
     ]
 });

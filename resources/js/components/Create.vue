@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>IM the create page</h2>
+        <h2>Manage or Create a new Listing</h2>
         <p>super fun</p>
     </div>
 </template>
