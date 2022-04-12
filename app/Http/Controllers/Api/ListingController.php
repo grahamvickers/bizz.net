@@ -18,7 +18,7 @@ class ListingController extends Controller
     public function index(Request $request){
 
         if ($request->q) {
-            $listings = Listing::where('id', 'LIKE', "%{$request->q}%")
+            $listings = Listing::where('id', '=', $request->q)
                 ->get()
                 ->map->only([
                     'id',
