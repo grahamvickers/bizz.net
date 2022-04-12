@@ -38704,7 +38704,7 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v("LISTING")]),
     _vm._v(" "),
-    _c("h2", [_vm._v(_vm._s(_vm.moreInfo.name))])
+    _c("h2", [_vm._v(_vm._s(_vm.moreInfo[0].name))])
   ])
 }
 var staticRenderFns = []

@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>LISTING</h1>
-        <h2>{{moreInfo.name}}</h2>
+        <h2>{{moreInfo[0].name}}</h2>
     </div>
 </template>
 
