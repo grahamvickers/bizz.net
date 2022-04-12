@@ -18,7 +18,7 @@ class ListingController extends Controller
     public function index(Request $request){
 
         if ($request->q) {
-            $listings = Listing::where('id', "%{$request->q}%")
+            $listings = Listing::where('id', 'LIKE', "%{$request->q}%")
                 ->get()
                 ->map->only([
                     'id',
@@ -47,4 +47,14 @@ class ListingController extends Controller
    
         return response()->json($listings, 200);
     }
+
+    // /**
+    //  * Return selected listing by its :id
+    //  */
+    // public function getListingId (Request $request) {
+        
+    //     $listing = Listing::where('id', '=', 'req.params')
+    //     return response()->json($blogs, 200);
+
+    // }
 }
