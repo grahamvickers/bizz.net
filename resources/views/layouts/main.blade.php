@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Bizz.net') }}</title>
+    <title>Bizz Net</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/main.js') }}" defer></script>

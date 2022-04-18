@@ -1,22 +1,7 @@
 <template>
-    <div class="wrapper">
-
-        <!-- <nav id="sidebar" :class="{'closed': !showSidebar}">
-            <div class="img"></div>
-            <div class="sidebar-header">
-                <h1>Vue Dashboard</h1>
-            </div>
-            <div class="links">
-                <router-link to="/" class="btn btn-block btn-light">
-                    Dashboard
-                </router-link>
-                <router-link to="/create" class="btn btn-block btn-light">
-                    create
-                </router-link>
-                <logout />
-            </div>
-        </nav> -->
-
+    <div>
+    <NavCon />
+        
         <div id="content">
             <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light d-block">
                 <button type="button" class="btn btn-dark btn-sm" @click="showSidebar = !showSidebar">
@@ -27,7 +12,7 @@
                     <span class="fa fa-user"></span>
                 </router-link>
             </nav> -->
-            <NavCon />
+            
 
             <div class="pt-3 pb-3">
                 

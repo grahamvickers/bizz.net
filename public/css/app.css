@@ -297,6 +297,7 @@ p {
   padding: 30px;
   margin: 30px;
   width: 300px;
+  height: 418px;
 }
 
 .listingCon h3 {
@@ -307,13 +308,17 @@ p {
   color: #615CF2;
 }
 
-.listingCon button {
+.listingCon router-link {
   padding: none !important;
   width: 100%;
 }
 
-.listingCon .button {
-  padding: none !important;
+.listingCon .profit {
+  margin-bottom: 15px;
+}
+
+.listingCon .bottomBtn {
+  bottom: 0;
 }
 
 .image {
