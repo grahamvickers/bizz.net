@@ -167,7 +167,7 @@ p {
 .introBoxes img {
   width: 80%;
   margin-bottom: 20px;
-  max-width: 250px;
+  max-height: 200px;
 }
 
 .introBoxes h3 {
@@ -436,8 +436,53 @@ footer {
   text-align: center;
 }
 
-footer div {
-  margin-top: none !important;
+footer #icons {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+footer #socialIcons {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+footer #socialIcons li {
+  padding: 0px 10px;
+}
+
+footer #address {
+  margin-top: 30px;
+  text-align: left;
+}
+
+@media screen and (min-width: 680px) {
+  .aboutCons {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .introBoxes {
+    padding: 0px 30px;
+    max-width: 500px;
+  }
+
+  .introBoxes img {
+    height: 180px;
+  }
 }
 
 @media screen and (min-width: 1280px) {

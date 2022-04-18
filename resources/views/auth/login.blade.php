@@ -1,13 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
-@include('layouts.partials.nav')
+<section class="landing">
+    <h2>Find Your Next Venture Capital Project Today!</h2>
+    <p>Explore 10,000+ businesses for sale across North America.</p>
+</section>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                <h2>LOGIN</h2>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -71,4 +73,8 @@
         </div>
     </div>
 </div>
+@include('layouts.partials.footer')
+
 @endsection
+
+
