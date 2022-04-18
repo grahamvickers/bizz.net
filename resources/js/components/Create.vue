@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h2>Manage or Create a new Listing</h2>
-        <p>super fun</p>
+        <h2>Create a new Listing</h2>
+        
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>LISTING</h1>
+        <h1 class="hidden">Selected Listing Page - now showing {{moreInfo[0].name}}</h1>
         <h2>{{moreInfo[0].name}}</h2>
     </div>
 </template>

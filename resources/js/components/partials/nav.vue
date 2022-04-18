@@ -17,11 +17,11 @@
         </nav>
 
         <!-- hambuger nav -->
-        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" onclick="showNav()">&#9776; </span>
+        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" v-on:click="showNav()">&#9776; </span>
 
         <div id="navOverCon" class="overlay">
             <h2 class="hidden">Main Navigation</h2>
-            <!-- <a href="javascript:void(0)" class="closebtn" onclick="hideNav()">&times;</a> -->
+            <a href="javascript:void(0)" class="closebtn" v-on:click="hideNav()">&times;</a>
             <div class="overlay-con">
                 <ul>
                     <li><a href="/listings">LISTINGS</a></li>
@@ -42,6 +42,17 @@
 export default {
     components: {
         Logout
+    },
+    mounted: function() {
+        console.log("dynamic nav");
+
+        function showNav() {
+            document.getElementById("navOverCon").style.width = "100%";
+        }
+        
+        function hideNav() {
+            document.getElementById("navOverCon").style.width = "0%";
+        }
     }
 }
 </script>
