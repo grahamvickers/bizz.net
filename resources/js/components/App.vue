@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
-        <nav id="sidebar" :class="{'closed': !showSidebar}">
+
+        <!-- <nav id="sidebar" :class="{'closed': !showSidebar}">
             <div class="img"></div>
             <div class="sidebar-header">
                 <h1>Vue Dashboard</h1>
@@ -14,10 +15,10 @@
                 </router-link>
                 <logout />
             </div>
-        </nav>
+        </nav> -->
 
         <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light d-block">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light d-block">
                 <button type="button" class="btn btn-dark btn-sm" @click="showSidebar = !showSidebar">
                     <span v-if="showSidebar" class="fa fa-times"></span>
                     <span v-else class="fa fa-bars"></span>
@@ -25,7 +26,9 @@
                 <router-link to="/profile" class="h4 d-block float-right text-dark">
                     <span class="fa fa-user"></span>
                 </router-link>
-            </nav>
+            </nav> -->
+            <NavCon />
+
             <div class="pt-3 pb-3">
                 
                 <router-view v-bind:listings="theListings" />
@@ -36,6 +39,7 @@
 </template>
 
 <script>
+    import NavCon from './partials/nav.vue';
     import Logout from './partials/logout.vue';
 
     export default {
@@ -64,7 +68,9 @@
         },
         
         components: {
+            NavCon,
             Logout
+            
         },
 
         mounted() {

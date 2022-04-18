@@ -1,7 +1,9 @@
 @extends('layouts.app')
-
+  <section class="landing">
+            <h2>Find Your Next Venture Capital Project Today!</h2>
+            <p>Explore 10,000+ businesses for sale across North America.</p>
+    </section>
 @section('content')
-@include('layouts.partials.nav')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

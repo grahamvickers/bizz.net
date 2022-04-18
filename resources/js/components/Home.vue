@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Welcome to Vue Dashboard</h1>
+        <h1 class="hidden">Welcome to Listings Dashboard</h1>
 
          <section id="listings">
             <h2 class="hidden">List of listings</h2>
