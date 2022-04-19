@@ -3,22 +3,36 @@
         <section id="contentCon">
             <h2>Create a new Listing</h2>
 
-            <div>
+            <div id="mainFormCon">
                 <form ref="listingForm" enctype="multipart/form-data">
 
                     <div class="formItemCon">
-                        <label for="name">Name</label>
+                        <label for="name">Company Name</label>
                         <input type="text" name="name" id="name">
                     </div>
 
                     <div class="formItemCon">
-                        <label for="address">Address</label>
+                        <label for="address">Company Address</label>
                         <input type="text" name="address" id="address">
                     </div>  
 
                     <div class="formItemCon">
                         <label for="city">City</label>
                         <input type="text" name="city" id="city">
+                    </div> 
+
+                    <div class="formItemCon">
+                        <label for="province">Province/ State</label>
+                        <input type="text" name="province" id="province">
+                    </div> 
+
+                    <div class="formItemCon">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option label="Choose...">Select</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
                     </div> 
 
                     <div class="formItemCon">
@@ -51,7 +65,7 @@
                         <!-- <p v-for="(error, key) in errors" class="mb-0" :key="`errors-${key}`">{ error[0] }}</p> -->
                     </div>  
                     <button class="button" @click="submit" :disabled="processing">
-                        {{ processing ? 'Processing...' : 'Create' }}
+                        {{ processing ? 'Processing...' : 'Upload Listing' }}
                     </button>
                 </form>
             </div>

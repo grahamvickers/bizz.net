@@ -31,6 +31,9 @@ class Listing extends Model
      */
     public function getImgUriAttribute()
     {
-        return Storage::url($this->img);
+        return $this->hasImg
+            ? Storage::url($this->img)
+            : null;
+
     }
 }

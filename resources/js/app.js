@@ -10,10 +10,14 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         user: null,
+        listings: null
     },
     mutations: {
         user (state, UserData) {
             state.user = UserData;
+        },
+        listings (state, ListingsData) {
+            state.listings = ListingsData;
         }
     }
 });
@@ -26,7 +30,7 @@ new Vue ({
 });
 
 
-console.log("dynamic nav");
+// console.log("dynamic nav");
 
 function showNav() {
     document.getElementById("navOverCon").style.width = "100%";
