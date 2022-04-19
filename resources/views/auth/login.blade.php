@@ -31,7 +31,7 @@
                         <div class="formItemCon">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -43,19 +43,20 @@
                         </div>
 
                       
-                        <div>
+                        <div > 
                             <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label for="remember">
                                 {{ __('Remember Me') }}
                             </label>
                         </div>
-                       
+                       <br>
 
                         <div>
                             <button type="submit" class="button">
                                 {{ __('Login') }}
                             </button>
+                       <br>
                             <br>
                             @if (Route::has('password.request'))
                                 <a class="button" href="{{ route('password.request') }}">
@@ -63,6 +64,7 @@
                                 </a>
                             @endif
                         </div>
+                       <br>
                         
                     </form>
                 </div>

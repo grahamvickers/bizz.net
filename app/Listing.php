@@ -18,6 +18,8 @@ class Listing extends Model
         'name',
         'address',
         'city',
+        'province',
+        'country',
         'price',
         'profit',
         'income',

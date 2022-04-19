@@ -15,9 +15,6 @@ const store = new Vuex.Store({
     mutations: {
         user (state, UserData) {
             state.user = UserData;
-        },
-        listings (state, ListingsData) {
-            state.listings = ListingsData;
         }
     }
 });
