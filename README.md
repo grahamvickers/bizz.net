@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-You must have docker installed locally to run this version of Bizz Net. Don't have it? Click [HERE]()https://docs.docker.com/get-docker/ to download the latest version!
+You must have docker installed locally to run this version of Bizz Net. Don't have it? Click [HERE](https://docs.docker.com/get-docker/) to download the latest version!
 
 ### Installing
 
