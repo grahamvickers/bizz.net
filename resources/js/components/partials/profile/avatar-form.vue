@@ -106,8 +106,8 @@
     .avatar {
         background-size:cover !important;
         background-position:center !important;
-        height:300px;
-        width:100%;
-        margin:0 auto;
+        height:200px;
+        width:200px;
+        // margin:0 auto;
     }    
 </style>

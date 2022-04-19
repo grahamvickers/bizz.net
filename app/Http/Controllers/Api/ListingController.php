@@ -69,7 +69,7 @@ class ListingController extends Controller
             'img' => 'required|image|max:50000000'
         ]);
 
-        $imgName = Storage::putFile('public', $request->img);
+        $imgName = Storage::putFile('public/listings_images', $request->img);
 
         Listing::create([
             'name' => $request->name,
@@ -83,7 +83,7 @@ class ListingController extends Controller
         ]);
 
 
-        return redirect('/home');
+        return redirect('/listings');
     }
 
   

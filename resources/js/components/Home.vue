@@ -19,6 +19,7 @@
             <h2 class="hidden">List of listings</h2>
             <div v-for="listing in filteredListings" v-bind:key="listing.id" class="listingCon">
                 <div>
+                    <!-- <div class="image" :style="{'background': `url(${listing.img})`}"></div> -->
                     <div class="image" :style="`background:url(./images/${listing.img})`"></div>
                     <h3>{{listing.name}}</h3>
                     <h3>${{listing.price}}</h3>
@@ -47,6 +48,11 @@
         },  
         props: ['listings'],
         computed: {
+            // hasImg() {
+            //     return listing
+            //         ? listing.has_img
+            //         :false
+            // },
             filteredListings: function() {
                 let listing_array = this.listings;
                 let searchString = this.searchString;

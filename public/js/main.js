@@ -1,4 +1,4 @@
-console.log("dynamic nav");
+// console.log("dynamic nav");
 
 function showNav() {
     document.getElementById("navOverCon").style.width = "100%";
