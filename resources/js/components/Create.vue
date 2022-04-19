@@ -17,23 +17,33 @@
                     </div>  
 
                     <div class="formItemCon">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
                     </div> 
 
                     <div class="formItemCon">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address">
+                        <label for="price">Price</label>
+                        <input type="text" name="price" id="price">
                     </div>
 
                     <div class="formItemCon">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address">
+                        <label for="profit">Net Profit %</label>
+                        <input type="text" name="profit" id="profit">
                     </div> 
 
                     <div class="formItemCon">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="address">
+                        <label for="income">Annual Income</label>
+                        <input type="text" name="income" id="income">
+                    </div> 
+
+                    <div class="formItemCon">
+                        <label for="content">About Description</label>
+                        <textarea type="text" name="content" id="content" />
+                    </div> 
+
+                    <div class="formItemCon">
+                        <label for="img">Exterior Photo</label>
+                        <input type="file" name="img" id="img">
                     </div> 
 
                     <div v-if="errors" class="alert alert-danger">
@@ -53,6 +63,14 @@
 export default {
     data() {
         return {
+            name: null,
+            address: null,
+            city: null,
+            price: null,
+            profit: null,
+            income: null,
+            img: null,
+            content: null,
             processing: false,
             errors: null
         }
@@ -72,7 +90,8 @@ export default {
 
             axios.post(`/api/listings`, formData)
                 .then(response => {
-                    this.$store.commit('user', response.data);
+                    console.log(response.status);
+                    this.$store.commit('listing', response.data);
                 }).catch(error => {
                     this.errors = error.response.data.errors;
                 }).then(() => {
