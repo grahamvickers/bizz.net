@@ -1,16 +1,20 @@
 <template>
 <div>
-        <section class="landing">
-            <h2>Find Your Next Venture Capital Project Today!</h2>
-            <p>Explore 10,000+ businesses for sale across North America.</p>
-        </section>
+    <section class="landing">
+        <h2>Find Your Next Venture Capital Project Today!</h2>
+        <p>Explore 10,000+ businesses for sale across North America.</p>
+    </section>
+
     <div id="contentCon">
+        <!-- live search -->
         <section id="searchCon">
             <form>
                 <label for="searchInput">Search:</label>
                 <input type="search" id="searchInput Search" placeholder="ex. London" v-model="searchString">
             </form>
         </section>
+
+        <!-- listings generated from api -->
         <section id="listings">
             <h2 class="hidden">List of listings</h2>
             <div v-for="listing in filteredListings" v-bind:key="listing.id" class="listingCon">
@@ -22,9 +26,13 @@
                     <p class="profit">Profit Margin: {{listing.profit}}</p>
                 </div>
                 
-                <router-link :to="`/${listing.id}`" class="button bottomBtn">READ MORE</router-link>
+                <router-link :to="`/${listing.id}`" class="button bottomBtn">Read More</router-link>
             </div>
         </section>
+
+        <div id="loadMore">
+            <button class="button">Load More</button>
+        </div>
     </div>
 </div>
 
@@ -62,3 +70,11 @@
         }
     }
 </script>
+
+<style lang="scss">
+#loadMore{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+</style>

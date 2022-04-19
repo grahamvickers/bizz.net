@@ -4,9 +4,17 @@
         <h1 class="hidden" >Selected Listing Page - now showing {{moreInfo[0].name}}</h1>
         <div>
           <h2>{{moreInfo[0].name}}</h2>
-          <h2>${{moreInfo[0].price}}</h2>
+          <h3>${{moreInfo[0].price}}</h3>
+          <h3>{{moreInfo[0].address}}</h3>
+          <img :src="`/images/${moreInfo[0].img}`" alt="">
+          <p>{{moreInfo[0].content}}</p>
         </div>
-        
+        <div>
+          <h2 class="hidden">Contact Options</h2>
+          <button class="button">CALL</button>
+          <button class="button">EMAIL</button>
+          <button class="button">MESSAGE</button>
+        </div>
       </section>
     </div>
 </template>

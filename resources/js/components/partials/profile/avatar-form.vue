@@ -1,9 +1,12 @@
 <template>
     <div class="card">
+
         <div class="card-header">
             Avatar
         </div>
+
         <div class="card-body">
+
             <template v-if="hasAvatar">
                 <div 
                     class="avatar"
@@ -19,9 +22,10 @@
                     {{ processing ? 'Processing...' : 'Delete Avatar'}}
                 </button>
             </template>
+
             <template v-else>
                 <form ref="avatarForm" enctype="multipart/form-data"> 
-                <input type="hidden" name="upload_avatar" value="1" />
+                    <input type="hidden" name="upload_avatar" value="1" />
                     <div class="form-group">
                         <label for="avatar">Avatar *</label>
                         <input type="file" class="form-control" name="avatar" id="avatar" />
@@ -39,6 +43,7 @@
                     </button>
                 </form>
             </template>
+
         </div>
     </div>
 </template>

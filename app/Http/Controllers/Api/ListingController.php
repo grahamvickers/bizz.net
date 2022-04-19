@@ -48,13 +48,42 @@ class ListingController extends Controller
         return response()->json($listings, 200);
     }
 
-    // /**
-    //  * Return selected listing by its :id
-    //  */
-    // public function getListingId (Request $request) {
-        
-    //     $listing = Listing::where('id', '=', 'req.params')
-    //     return response()->json($blogs, 200);
+    /**
+     * Store a newly created listing in storage.
+     *
+     * @param  Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(Request $request)
+    {
 
-    // }
+        $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'price' => 'required',
+            'profit' => 'required',
+            'income' => 'required',
+            'content' => 'required',
+            'img' => 'required|image|max:50000000'
+        ]);
+
+        $imgName = Storage::putFile('public', $request->img);
+
+        Listing::create([
+            'name' => $request->name,
+            'address' => $request->address,
+            'city' => $request->city,
+            'price' => $request->price,
+            'profit' => $request->profit,
+            'income' => $request->income,
+            'content' => $request->content,
+            'img' => $imgName
+        ]);
+
+
+        return redirect('/home');
+    }
+
+  
 }
