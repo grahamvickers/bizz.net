@@ -1,10 +1,10 @@
 <template>
     <div class="card">
         <div class="card-header">
-            Change Password
+            <h3>Change Password</h3>
             <button
                 type="button"
-                class="btn btn-sm btn-outline-primary float-right"
+                class="button"
                 @click="showPasswords = !showPasswords"
                 >
                 <template v-if="showPasswords">
@@ -55,7 +55,7 @@
                         {{ error[0] }}
                     </p>
                 </div>
-                <button type="button" class="btn btn-primary" @click="submit" :disabled="processing">
+                <button type="button" class="button" @click="submit" :disabled="processing">
                     {{ processing ? 'Processing...' : 'Update' }}
                 </button>
             </form>

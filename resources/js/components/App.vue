@@ -1,23 +1,9 @@
 <template>
     <div>
-    <NavCon />
-        
-        <div id="content">
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light d-block">
-                <button type="button" class="btn btn-dark btn-sm" @click="showSidebar = !showSidebar">
-                    <span v-if="showSidebar" class="fa fa-times"></span>
-                    <span v-else class="fa fa-bars"></span>
-                </button>
-                <router-link to="/profile" class="h4 d-block float-right text-dark">
-                    <span class="fa fa-user"></span>
-                </router-link>
-            </nav> -->
-            
-
-            <div class="pt-3 pb-3">
-                
+        <NavCon />
+        <div>
+            <div >
                 <router-view v-bind:listings="theListings" />
-
             </div>
         </div>
     </div>
@@ -66,7 +52,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
     .wrapper {
         display: flex;
@@ -76,8 +62,9 @@
 
     #content {
         background: #f8f9fa;
-        padding:15px;
-
+        // padding: 30px;
+        // display: flex;
+        // margin: 0 auto;
         .navbar {
             padding:0 !important;
         }

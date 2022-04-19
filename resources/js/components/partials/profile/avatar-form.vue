@@ -12,7 +12,7 @@
                 </div>
                 <button
                     type="button"
-                    class="btn btn-danger btn-block mt-3"
+                    class="button"
                     @click="removeAvatar"
                     :disabled="processing"    
                 >
@@ -34,7 +34,7 @@
                             {{ error[0] }}
                         </p>
                     </div>
-                    <button class="btn btn-primary btn-block" @click="submit" :disabled="processing">
+                    <button class="button" @click="submit" :disabled="processing">
                     {{ processing ? 'Processing...' : 'Upload' }}
                     </button>
                 </form>
