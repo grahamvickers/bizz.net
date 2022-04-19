@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Listing;
 
 class ListingController extends Controller
@@ -58,13 +59,13 @@ class ListingController extends Controller
     {
 
         $request->validate([
-            'name' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'price' => 'required',
-            'profit' => 'required',
-            'income' => 'required',
-            'content' => 'required',
+            'name' => 'required|string',
+            'address' => 'required|string',
+            'city' => 'required|string',
+            'price' => 'required|string',
+            'profit' => 'required|string',
+            'income' => 'required|string',
+            'content' => 'required|string',
             'img' => 'required|image|max:50000000'
         ]);
 

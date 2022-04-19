@@ -1948,9 +1948,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      name: null,
+      address: null,
+      city: null,
+      price: null,
+      profit: null,
+      income: null,
+      img: null,
+      content: null,
       processing: false,
       errors: null
     };
@@ -1969,7 +1987,9 @@ __webpack_require__.r(__webpack_exports__);
       var formData = new FormData(this.$refs.listingForm);
       formData.append('_method', 'PATCH');
       axios.post("/api/listings", formData).then(function (response) {
-        _this.$store.commit('user', response.data);
+        console.log(response.status);
+
+        _this.$store.commit('listing', response.data);
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       }).then(function () {
@@ -38895,6 +38915,10 @@ var render = function() {
             _vm._v(" "),
             _vm._m(5),
             _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _vm._m(7),
+            _vm._v(" "),
             _vm.errors
               ? _c("div", { staticClass: "alert alert-danger" }, [
                   _c("p", [
@@ -38952,9 +38976,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formItemCon" }, [
-      _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+      _c("label", { attrs: { for: "city" } }, [_vm._v("City")]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "address", id: "address" } })
+      _c("input", { attrs: { type: "text", name: "city", id: "city" } })
     ])
   },
   function() {
@@ -38962,9 +38986,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formItemCon" }, [
-      _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+      _c("label", { attrs: { for: "price" } }, [_vm._v("Price")]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "address", id: "address" } })
+      _c("input", { attrs: { type: "text", name: "price", id: "price" } })
     ])
   },
   function() {
@@ -38972,9 +38996,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formItemCon" }, [
-      _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+      _c("label", { attrs: { for: "profit" } }, [_vm._v("Net Profit %")]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "address", id: "address" } })
+      _c("input", { attrs: { type: "text", name: "profit", id: "profit" } })
     ])
   },
   function() {
@@ -38982,9 +39006,31 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "formItemCon" }, [
-      _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+      _c("label", { attrs: { for: "income" } }, [_vm._v("Annual Income")]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "address", id: "address" } })
+      _c("input", { attrs: { type: "text", name: "income", id: "income" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "formItemCon" }, [
+      _c("label", { attrs: { for: "content" } }, [_vm._v("About Description")]),
+      _vm._v(" "),
+      _c("textarea", {
+        attrs: { type: "text", name: "content", id: "content" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "formItemCon" }, [
+      _c("label", { attrs: { for: "img" } }, [_vm._v("Exterior Photo")]),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "file", name: "img", id: "img" } })
     ])
   }
 ]
