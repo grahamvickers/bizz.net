@@ -52,6 +52,10 @@ p {
   max-width: 250px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -333,7 +337,7 @@ a {
 }
 
 .listingCon .profit {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .image {
@@ -396,6 +400,10 @@ a {
   outline: none !important;
 }
 
+#remember {
+  max-width: 13px !important;
+}
+
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   height: 15px;
@@ -449,8 +457,9 @@ input[type="search"]::-webkit-search-cancel-button {
           flex-direction: column;
   -webkit-box-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+          align-items: left;
+  width: 300px;
   margin-bottom: 10px;
 }
 

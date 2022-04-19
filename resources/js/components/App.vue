@@ -2,9 +2,9 @@
     <div>
         <NavCon />
         <div>
-            <div >
-                <router-view v-bind:listings="theListings" />
-            </div>
+            <transition name="fade" mode="out-in">
+                <router-view v-bind:listings="theListings" :key="$route.path"/>
+            </transition>
         </div>
     </div>
 </template>
@@ -53,7 +53,15 @@
 </script>
 
 <style lang="scss">
-
+    .fade-enter-active,
+    .fade-leave-active{
+        transition: opacity 0.2s;
+    }
+    .fade-enter,
+    .fade-leave-to{
+        opacity: 0;
+        
+    }
     .wrapper {
         display: flex;
         width: 100%;

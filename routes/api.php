@@ -23,3 +23,5 @@ route::patch('users/{user}', 'Api\UserController@update')->name('users.update');
 Route::group(['namespace' => 'Api'], function(){
     Route::get('get-listings', 'ListingController@index');
 });
+
+Route::patch('listings', 'Api\ListingController@store')->name('listing.store');
