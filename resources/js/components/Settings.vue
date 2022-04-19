@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="content">
         <section>
             <h1 class="hidden">Settings</h1>
             <router-link to="/manage_listings" class="noLine">
@@ -20,11 +20,12 @@
 
 <style lang="scss" scoped>
     section{
-        padding: 60px 0px;
+        // padding: 120px 0px;
         margin: 0 auto;
         max-width: 900px;
         div{
             text-align: center;
+            margin-top: 40px;
             margin-bottom: 40px;
             h3{
                 margin-top: 20px;

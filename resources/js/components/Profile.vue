@@ -1,16 +1,20 @@
 <template>
     <div>
-        <h1>Profile</h1>
-        <div class="row">
-            <div class="col-md-7">
-                <div class="mt-3">
-                    <password-form />
+        <section id="contentCon">
+            <h2>Edit Profile</h2>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="mt-3">
+                        <password-form />
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <avatar-form />
                 </div>
             </div>
-            <div class="col-md-5">
-                <avatar-form />
-            </div>
-        </div>
+        </section>
+       
     </div>
 </template>
 

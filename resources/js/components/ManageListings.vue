@@ -1,5 +1,8 @@
 <template>
     <div>
-        <h2>Manage your listings</h2>
+        <section id="contentCon">
+            <h2>Manage your listings</h2>
+
+        </section>
     </div>
 </template>

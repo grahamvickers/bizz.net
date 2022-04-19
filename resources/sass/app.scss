@@ -9,11 +9,12 @@ $light-purple: #8985F2;
 $dark-blue-2: #0511F2;
 $light-grey: #F2F2F2;
 $dark-grey: #575757;
+$background: #f8f9fa;
 
 
-// body {
-//    width: 100vw;
-// }
+body {
+    background: $background;
+}
 
 // main{
 //     max-width: 100%;
@@ -44,7 +45,7 @@ h3 {
 
 p {
     font-family: niveau-grotesk, sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     color: #575757;
     font-size: 18px;
@@ -66,12 +67,19 @@ p {
     width: 150px !important;
     max-width: 250px;
 }
+a{
+    text-decoration: none;
+}
 .hidden {
     display: none;
 }
 
 #mainNav{
     display: none;
+}
+
+#contentCon{
+    padding: 30px 40px;
 }
   
 
@@ -278,12 +286,16 @@ right: 35px;
 }
 .listingCon{
     background-color: $light-grey;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: left;
     padding: 30px;
-    margin: 30px;
+    margin: 20px;
     width: 300px;
     height: 418px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h3{
         margin-bottom: 10px;
     }
@@ -297,15 +309,14 @@ right: 35px;
     .profit{
        margin-bottom: 15px;
     }
-    .bottomBtn{
-        // position: absolute;
-        bottom: 0;
-    }
+    // .bottomBtn{
+        
+    // }
 }
 
 .image {
     height: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     background-size: cover !important;
     background-position: center !important;
@@ -347,10 +358,22 @@ right: 35px;
         color: $dark-grey;
         width: 250px;
         border-radius: 0px 5px 5px 0px;
-
+        &:focus{
+            outline: none !important;
+        }
     }
 
 }
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 5px;
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: .5;
+  }
 
 #resultCon{
     display: flex;
