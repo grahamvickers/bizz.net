@@ -1,4 +1,4 @@
-![](/public/images/logo_name.svg)
+![](/public/images/bizznet_logo.svg)
 
 # Bizz.Net - Interactive Media Specialist Thesis Project
 
