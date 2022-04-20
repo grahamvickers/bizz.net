@@ -2284,6 +2284,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 // import ListingChart from './partials/listing-chart.vue';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -7147,7 +7155,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#contentCon div[data-v-0a55fc2e] {\n  margin-bottom: 10px;\n}\nh2[data-v-0a55fc2e], h3[data-v-0a55fc2e] {\n  margin-bottom: 15px;\n}\n#green[data-v-0a55fc2e] {\n  color: #4FC666;\n}\n#red[data-v-0a55fc2e] {\n  color: #D05656;\n}\n@media screen and (min-width: 780px) {\n#listingInfo[data-v-0a55fc2e] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n            flex-direction: row-reverse;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n}\n#listingInfo img[data-v-0a55fc2e] {\n    margin-right: 30px;\n}\n}", ""]);
+exports.push([module.i, "#image[data-v-0a55fc2e] {\n  width: 300px;\n  height: 220px;\n  border-radius: 5px;\n  background-size: cover !important;\n  background-position: center !important;\n  background-repeat: no-repeat !important;\n  margin-top: 30px;\n}\n#contentCon div[data-v-0a55fc2e] {\n  margin-bottom: 10px;\n}\nh2[data-v-0a55fc2e], h3[data-v-0a55fc2e] {\n  margin-bottom: 15px;\n}\n#green[data-v-0a55fc2e] {\n  color: #4FC666;\n}\n#red[data-v-0a55fc2e] {\n  color: #D05656;\n}\n@media screen and (min-width: 780px) {\n#listingInfo[data-v-0a55fc2e] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n            flex-direction: row-reverse;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n}\n#listingInfo #image[data-v-0a55fc2e] {\n    margin-right: 30px;\n    margin-top: 0;\n}\n}", ""]);
 
 // exports
 
@@ -40006,17 +40014,22 @@ var render = function() {
                       _vm._m(1)
                     ])
               ])
-            ]
+            ],
+            _vm._v(" "),
+            _vm._m(2)
           ],
           2
         ),
         _vm._v(" "),
-        _c("img", { attrs: { src: "/images/" + _vm.moreInfo[0].img, alt: "" } })
+        _c("div", {
+          style: "background:url(./images/" + _vm.moreInfo[0].img + ")",
+          attrs: { id: "image" }
+        })
       ]),
       _vm._v(" "),
       _c("div", [_c("p", [_vm._v(_vm._s(_vm.moreInfo[0].content))])]),
       _vm._v(" "),
-      _vm._m(2)
+      _vm._m(3)
     ])
   ])
 }
@@ -40048,11 +40061,51 @@ var staticRenderFns = [
     return _c("div", [
       _c("h2", { staticClass: "hidden" }, [_vm._v("Contact Options")]),
       _vm._v(" "),
-      _c("button", { staticClass: "button" }, [_vm._v("CALL")]),
+      _c("button", { staticClass: "buttonIcons" }, [
+        _c("span", [
+          _c("img", {
+            attrs: { src: "images/call.svg", alt: "Call/ Phone - Icon" }
+          })
+        ])
+      ]),
       _vm._v(" "),
-      _c("button", { staticClass: "button" }, [_vm._v("EMAIL")]),
+      _c("button", { staticClass: "buttonIcons" }, [
+        _c("span", [
+          _c("img", { attrs: { src: "images/email.svg", alt: "Email - Icon" } })
+        ])
+      ]),
       _vm._v(" "),
-      _c("button", { staticClass: "button" }, [_vm._v("MESSAGE")])
+      _c("button", { staticClass: "buttonIcons" }, [
+        _c("span", [
+          _c("img", {
+            attrs: { src: "images/message.svg", alt: "Message/Chat - Icon" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("button", { staticClass: "downloadBtn" }, [
+        _c("span", [
+          _c("img", {
+            attrs: { src: "images/download.svg", alt: "download icon" }
+          }),
+          _vm._v("Income Sheet")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "downloadBtn" }, [
+        _c("span", [
+          _c("img", {
+            attrs: { src: "images/download.svg", alt: "download icon" }
+          }),
+          _vm._v("Balance Sheet")
+        ])
+      ])
     ])
   }
 ]

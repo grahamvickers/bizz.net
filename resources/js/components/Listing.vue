@@ -24,9 +24,17 @@
                   <p v-else id="red">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/bad.svg" alt="Red Thumbs Down Icon"></span></p>
                 </div>
             </template>
+            <div>
+              <h2 class="hidden">Contact Options</h2>
+              <button class="buttonIcons"><span><img src="images/call.svg" alt="Call/ Phone - Icon"></span></button>
+              <button class="buttonIcons"><span><img src="images/email.svg" alt="Email - Icon"></span></button>
+              <button class="buttonIcons"><span><img src="images/message.svg" alt="Message/Chat - Icon"></span></button>
+            </div>
           </div>
 
-          <img :src="`/images/${moreInfo[0].img}`" alt="">
+          <div id="image" :style="`background:url(./images/${moreInfo[0].img})`"></div>
+
+          <!-- <img :src="`/images/${moreInfo[0].img}`" alt="Exterior Photo of the business"> -->
         </div>
 
         <div>
@@ -42,11 +50,11 @@
         </div> -->
 
         <div>
-          <h2 class="hidden">Contact Options</h2>
-          <button class="button">CALL</button>
-          <button class="button">EMAIL</button>
-          <button class="button">MESSAGE</button>
+          <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Income Sheet</span></button>
+          <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Balance Sheet</span></button>
         </div>
+
+        
       </section>
 
     </div>
@@ -127,6 +135,16 @@
 </script>
 
 <style lang="scss" scoped>
+
+#image{
+  width: 300px;
+  height: 220px;
+  border-radius: 5px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-top: 30px;
+}
 #contentCon{
   div{
     margin-bottom: 10px;
@@ -149,8 +167,10 @@ h2,h3{
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    img{
+    #image{
       margin-right: 30px;
+      margin-top: 0;
+
     }
   }
 }
