@@ -497,6 +497,10 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-bottom: 5px;
 }
 
+.formItemCon select:hover {
+  cursor: pointer;
+}
+
 .formItemCon input,
 .formItemCon textarea,
 .formItemCon select {
@@ -534,6 +538,10 @@ input[type="search"]::-webkit-search-cancel-button {
   font-style: normal;
   color: #F2F2F2;
   padding: 5px;
+}
+
+::-webkit-file-upload-button:hover {
+  cursor: pointer;
 }
 
 #createForm {

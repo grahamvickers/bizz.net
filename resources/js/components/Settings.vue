@@ -11,7 +11,7 @@
             <router-link to="/profile" class="noLine">
                 <div>
                     <img src="/images/profile.svg" alt="edit profile">
-                    <h3>Edit Profile</h3>
+                    <h3>Manage Account</h3>
                 </div>
             </router-link>
         </section>

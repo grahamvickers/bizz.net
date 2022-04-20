@@ -213,6 +213,7 @@ export default {
                     console.log(response.status);
                     this.$store.commit('listing', response.data);
                     this.$router.push("/");
+                    this.$router.go();
                 }).catch(error => {
                     this.errors = error.response.data.errors;
                 }).then(() => {

@@ -27,7 +27,13 @@
                     <h3>{{listing.name}}</h3>
                     <h3>${{listing.price}}</h3>
                     <p>{{listing.address}}</p>
-                    <p class="profit">Profit Margin: {{listing.profit}}</p>
+                    <!-- <p class="profit">Profit Margin: {{listing.profit}} %</p> -->
+                     <template>
+                        <div>
+                        <p v-if="`${listing.profit}` >= 20">Profit Margin: {{listing.profit}} % &#128077;</p>
+                        <p v-else id="red">Profit Margin: {{listing.profit}} % &#128078;</p>
+                        </div>
+                    </template>
                 </div>
                 
                 <router-link :to="`/${listing.id}`" class="button bottomBtn">Read More</router-link>
