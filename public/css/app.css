@@ -82,6 +82,67 @@ a {
   margin: 0 auto;
 }
 
+#authCon {
+  padding: 60px 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+#authCon #mainFormCon {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center !important;
+          justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+#authCon #mainFormCon input {
+  width: 300px;
+}
+
+#authBtns {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 100% !important;
+}
+
+#authBtns button,
+#authBtns a {
+  width: 100% !important;
+}
+
+#rememberCon #remember {
+  accent-color: #615CF2;
+}
+
+#rememberCon label {
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #575757;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+#loginRegister {
+  text-align: center;
+  max-width: 300px;
+}
+
 .overlay {
   height: 100%;
   width: 0;
@@ -514,6 +575,7 @@ input[type="search"]::-webkit-search-cancel-button {
   font-style: normal;
   color: #575757;
   font-size: 16px;
+  line-height: 22px;
 }
 
 .formItemCon input:focus,
@@ -595,7 +657,7 @@ footer #address {
 
   .introBoxes {
     padding: 0px 30px;
-    max-width: 500px;
+    max-width: 40%;
   }
 
   .introBoxes img {
@@ -604,6 +666,14 @@ footer #address {
 }
 
 @media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  #contentCon {
+    padding: 50px 40px;
+  }
+
   #mainNav {
     display: contents;
   }

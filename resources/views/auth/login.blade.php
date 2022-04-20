@@ -6,7 +6,7 @@
     <p>Explore 10,000+ businesses for sale across North America.</p>
 </section>
 
-<div id="contentCon">
+<div id="authCon">
     <h2>LOGIN</h2>
     <div id="mainFormCon">
         <form method="POST" action="{{ route('login') }}">
@@ -30,7 +30,7 @@
                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                 <div>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                    <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                     @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
             </div>
 
             
-            <div > 
+            <div id="rememberCon"> 
                 <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                 <label for="remember">
@@ -50,18 +50,18 @@
             </div>
             <br>
 
-            <div>
-                <button type="submit" class="button">
-                    {{ __('Login') }}
-                </button>
-
-                <br>
-                <br>
+            <div >
+                <button type="submit" class="button" >{{ __('Login') }}</button>
                 <a href="#" class="button">Forgot Password</a>
             </div>
+
             <br>
             
+            
         </form>
+        <div id="loginRegister">
+            <p>Don't have an account? Click <a href="/register">HERE</a> to create one</p>
+        </div>
     </div>
 </div>
  

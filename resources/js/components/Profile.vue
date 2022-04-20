@@ -1,16 +1,16 @@
 <template>
     <div>
         <section id="contentCon">
-            <h2>Edit Profile</h2>
+            <h2>Account Management</h2>
 
             <div id="row">
 
                 <div>
-                    <password-form />
+                    <change-password-form />
                 </div>
 
                 <div >
-                    <avatar-form />
+                    <profile-picture-form />
                 </div>
             </div>
         </section>
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-    import AvatarForm from './partials/profile/avatar-form.vue';
-    import PasswordForm from './partials/profile/password-form.vue';
+    import ProfilePictureForm from './partials/profile/profile-picture-form.vue';
+    import ChangePasswordForm from './partials/profile/change-password-form.vue';
 
     export default {   
         components: {
-            AvatarForm,
-            PasswordForm
+            ProfilePictureForm,
+            ChangePasswordForm
         }
     };
 </script>

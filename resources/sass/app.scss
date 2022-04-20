@@ -90,6 +90,56 @@ a{
     align-content: flex-start;
     margin: 0 auto;
 }
+
+#authCon{
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    #mainFormCon {
+        display: flex;
+            flex-direction: column;
+            justify-content: center !important;
+            margin: 0 auto !important;
+        input{
+            width: 300px;
+            // margin-top: 5px;
+        }
+    } 
+}
+
+#authBtns{
+    display: flex;
+    flex-direction: column;
+        width: 100% !important;
+
+    button, a{
+        width: 100% !important;
+
+    }
+}
+
+#rememberCon{
+    #remember{
+        accent-color: $dark-purple;
+    }
+    label{
+        font-family: niveau-grotesk, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        color: #575757;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+#loginRegister{
+    text-align: center;
+    max-width: 300px;
+}
   
 
 // hamburger nav below
@@ -141,11 +191,6 @@ a{
     font-size: 20px
 }
 
-// .overlay .closebtn {
-// font-size: 40px;
-// top: 15px;
-// right: 35px;
-// }
 
 // all header settings
 #mainHead{
@@ -204,6 +249,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    // max-width: 1100px;
     width: 100%;
     img{
         max-height: 400px;
@@ -474,7 +520,7 @@ input[type="search"]::-webkit-search-cancel-button {
         font-style: normal;
         color: #575757;
         font-size: 16px;
-        // line-height: 28px;
+        line-height: 22px;
         &:focus{
             outline: none !important;
         }
@@ -501,6 +547,13 @@ input[type="search"]::-webkit-search-cancel-button {
         cursor: pointer;
     }
 }
+
+// input,select:-webkit-autofill,
+// input,select:-webkit-autofill:hover, 
+// input,select:-webkit-autofill:focus, 
+// input,select:-webkit-autofill:active{
+//     -webkit-box-shadow: 0 0 0 30px $background inset !important;
+// }
 
 
 #createForm{
@@ -542,11 +595,18 @@ footer{
             height: 180px;
         }
         padding: 0px 30px;
-        max-width: 500px;
+        max-width: 40%;
     }
 }
 
 @media screen and(min-width: 1200px) {
+    h2{
+        font-size: 36px;
+    }
+
+    #contentCon{
+        padding: 50px 40px;
+    }
     #mainNav{
         display: contents;
         
