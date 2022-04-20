@@ -5,73 +5,66 @@
     <h2>Find Your Next Venture Capital Project Today!</h2>
     <p>Explore 10,000+ businesses for sale across North America.</p>
 </section>
-<div>
-    <div>
-        <div>
-            <div>
-                <h2>LOGIN</h2>
-                <div id="mainFormCon">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
 
-                        <div class="formItemCon">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+<div id="contentCon">
+    <h2>LOGIN</h2>
+    <div id="mainFormCon">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-                            <div>
-                                <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <div class="formItemCon">
+                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                <div>
+                    <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                        <div class="formItemCon">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                      
-                        <div > 
-                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                            <label for="remember">
-                                {{ __('Remember Me') }}
-                            </label>
-                        </div>
-                       <br>
-
-                        <div>
-                            <button type="submit" class="button">
-                                {{ __('Login') }}
-                            </button>
-                       <br>
-                            <br>
-                            @if (Route::has('password.request'))
-                                <a class="button" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
-                        </div>
-                       <br>
-                        
-                    </form>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <p><strong>{{ $message }}</strong></p>
+                        </span>
+                    @enderror
                 </div>
             </div>
-        </div>
+
+            <div class="formItemCon">
+                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                <div>
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <p><strong>{{ $message }}</strong></p>
+                        </span>
+                    @enderror
+                </div>
+            </div>
+
+            
+            <div > 
+                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                <label for="remember">
+                    {{ __('Remember Me') }}
+                </label>
+            </div>
+            <br>
+
+            <div>
+                <button type="submit" class="button">
+                    {{ __('Login') }}
+                </button>
+
+                <br>
+                <br>
+                <a href="#" class="button">Forgot Password</a>
+            </div>
+            <br>
+            
+        </form>
     </div>
 </div>
+ 
 
 
 @include('layouts.partials.footer')

@@ -11,23 +11,23 @@
                 
                 <li><router-link to="/">LISTINGS</router-link></li>
                 <li><router-link to="/create">CREATE LISTING</router-link></li>
-                <li><router-link to="/settings">SETTINGS</router-link></li>
+                <li id="buffer"><router-link to="/settings">SETTINGS</router-link></li>
                 <li><logout /></li>
             </ul>
         </nav>
 
         <!-- hambuger nav -->
-        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" v-on:click="showNav()">&#9776; </span>
+        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" @click="showNav()"><img src="images/nav_btn.svg" alt="Navigation Button - Click to expand"></span>
 
         <div id="navOverCon" class="overlay">
             <h2 class="hidden">Main Navigation</h2>
-            <a href="javascript:void(0)" class="closebtn" v-on:click="hideNav()">&times;</a>
+            <a  class="closebtn" @click="hideNav()">&times;</a>
             <div class="overlay-con">
                 <ul>
-                    <li><a href="/listings">LISTINGS</a></li>
-                    <li><a href="/listings#/create">CREATE LISTING</a></li>
-                    <li><a href="/listings#/profile">SETTINGS</a></li>
-                    <li><logout /></li>
+                    <li><a href="/listings" @click="hideNav()">LISTINGS</a></li>
+                    <li><a href="/listings#/create" @click="hideNav()">CREATE LISTING</a></li>
+                    <li><a href="/listings#/settings" @click="hideNav()">SETTINGS</a></li>
+                    <li ><logout id="mobileBtn"/></li>
                     
                 </ul>
             </div>
@@ -43,16 +43,30 @@ export default {
     components: {
         Logout
     },
-    mounted: function() {
-        console.log("dynamic nav");
-
-        function showNav() {
+    methods: {
+        showNav() {
             document.getElementById("navOverCon").style.width = "100%";
-        }
+        },
         
-        function hideNav() {
+        hideNav() {
             document.getElementById("navOverCon").style.width = "0%";
         }
     }
 }
 </script>
+
+
+<style lang="scss">
+#mobileBtn{
+    background: none;
+    color: #f2f2f2;
+    // padding: none;
+    button{
+        margin-left: none !important;
+    }
+}
+
+#buffer{
+    margin-right: 20px;
+}
+</style>

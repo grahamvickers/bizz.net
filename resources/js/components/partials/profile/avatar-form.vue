@@ -1,45 +1,37 @@
 <template>
     <div class="card">
 
-        <div class="card-header">
-            Avatar
-        </div>
+        <h3>Profile Picture</h3>
 
-        <div class="card-body">
-
+        <div>
             <template v-if="hasAvatar">
-                <div 
-                    class="avatar"
-                    :style="{'background': `url(${user.avatar_uri})`}"
-                >
-                </div>
+                <div class="avatar" :style="{'background': `url(${user.avatar_uri})`}"></div>
                 <button
                     type="button"
                     class="button"
                     @click="removeAvatar"
                     :disabled="processing"    
                 >
-                    {{ processing ? 'Processing...' : 'Delete Avatar'}}
+                    {{ processing ? 'Processing...' : 'Remove Photo'}}
                 </button>
             </template>
 
             <template v-else>
-                <form ref="avatarForm" enctype="multipart/form-data"> 
+                <form ref="avatarForm" enctype="multipart/form-data" id="mainFormCon"> 
                     <input type="hidden" name="upload_avatar" value="1" />
-                    <div class="form-group">
-                        <label for="avatar">Avatar *</label>
+
+                    <div class="formItemCon">
+                        <label for="avatar" id="chooseFile">Avatar *</label>
                         <input type="file" class="form-control" name="avatar" id="avatar" />
                     </div>
+
+
                     <div v-if="errors" class="alert alert-danger">
-                        <p class="alert-heading h4">
-                            There were some issues updating your information.
-                        </p>
-                        <p v-for="(error, key) in errors" class="mb-0" :key="`errors-${key}`">
-                            {{ error[0] }}
-                        </p>
+                        <p class="alert-heading h4">There were some issues updating your information.</p>
+                        <p v-for="(error, key) in errors" class="mb-0" :key="`errors-${key}`">{{ error[0] }}</p>
                     </div>
                     <button class="button" @click="submit" :disabled="processing">
-                    {{ processing ? 'Processing...' : 'Upload' }}
+                        {{ processing ? 'Processing...' : 'Upload' }}
                     </button>
                 </form>
             </template>
@@ -108,6 +100,8 @@
         background-position:center !important;
         height:200px;
         width:200px;
+        border-radius: 5px;
+        margin: 30px 0px;
         // margin:0 auto;
     }    
 </style>

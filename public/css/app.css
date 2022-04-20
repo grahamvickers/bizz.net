@@ -75,8 +75,10 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+  align-content: flex-start;
   margin: 0 auto;
 }
 
@@ -119,19 +121,17 @@ a {
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: 40px;
+  right: 30px;
+  font-size: 40px;
+}
+
+.overlay .closebtn:hover {
+  cursor: pointer;
 }
 
 .overlay a {
   font-size: 20px;
-}
-
-.overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
 }
 
 #mainHead {
@@ -483,8 +483,7 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  min-width: 300px;
-  max-width: 350px !important;
+  width: 300px;
   margin: 20px 0px;
   text-align: left;
 }
@@ -521,8 +520,20 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .formItemCon textarea {
   resize: vertical;
-  max-width: 320px !important;
+  max-width: 280px !important;
   padding: none !important;
+}
+
+::-webkit-file-upload-button {
+  background: #615CF2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #F2F2F2;
+  padding: 5px;
 }
 
 #createForm {
@@ -584,7 +595,7 @@ footer #address {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   #mainNav {
     display: contents;
   }

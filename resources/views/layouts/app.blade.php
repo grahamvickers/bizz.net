@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/nku3uiu.css">

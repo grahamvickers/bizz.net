@@ -19,6 +19,9 @@
             <h2 class="hidden">List of listings</h2>
             <div v-for="listing in filteredListings" v-bind:key="listing.id" class="listingCon">
                 <div>
+                    <!-- the first div/image below is the proper storage link to the listing images in the
+                    storage folder but storage is broken still for the listings. Their there but not populating 
+                    -->
                     <!-- <div class="image" :style="{'background': `url(${listing.img})`}"></div> -->
                     <div class="image" :style="`background:url(./images/${listing.img})`"></div>
                     <h3>{{listing.name}}</h3>
