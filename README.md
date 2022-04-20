@@ -51,7 +51,7 @@ You can now go to [localhost:8082](https://localhost:8082) in a web broswer of y
 * Vue.js - Javascript Framework
 * JaveScript - Front-end enhancments
 * Laravel - PHP  
-* Ajax - Json data 
+* Ajax - Fetch data 
 * GitHub - Version control
 * Docker - Local Remote server
 
@@ -62,6 +62,12 @@ You can now go to [localhost:8082](https://localhost:8082) in a web broswer of y
 * Firefox - 100%
 * Safari - 100%
 * IE - Unknown
+
+## Issues
+
+* Listing image storage - the create form allows for the storage of the image but isn't being displayed from storage due to a break somewhere in storage. resources/js/components/Home.vue line 25
+
+* Charts.Js - wouldn't render on front-end which lead to little implementation of the charts for the individual listing data
 
 ## Authors
 
