@@ -40093,23 +40093,40 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "downloads" } }, [
-      _c("button", { staticClass: "downloadBtn" }, [
-        _c("span", [
-          _c("img", {
-            attrs: { src: "images/download.svg", alt: "download icon" }
-          }),
-          _vm._v("Income Sheet")
-        ])
-      ]),
+      _c(
+        "a",
+        {
+          staticClass: "downloadBtn",
+          attrs: { href: "./public/sheets/2021_income_sheet.pdf", download: "" }
+        },
+        [
+          _c("span", [
+            _c("img", {
+              attrs: { src: "images/download.svg", alt: "download icon" }
+            }),
+            _vm._v("Income Sheet")
+          ])
+        ]
+      ),
       _vm._v(" "),
-      _c("button", { staticClass: "downloadBtn" }, [
-        _c("span", [
-          _c("img", {
-            attrs: { src: "images/download.svg", alt: "download icon" }
-          }),
-          _vm._v("Balance Sheet")
-        ])
-      ])
+      _c(
+        "a",
+        {
+          staticClass: "downloadBtn",
+          attrs: {
+            href: "./public/sheets/2021_balance_sheet.pdf",
+            download: ""
+          }
+        },
+        [
+          _c("span", [
+            _c("img", {
+              attrs: { src: "images/download.svg", alt: "download icon" }
+            }),
+            _vm._v("Balance Sheet")
+          ])
+        ]
+      )
     ])
   }
 ]
