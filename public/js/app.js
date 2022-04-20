@@ -2278,6 +2278,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 // import ListingChart from './partials/listing-chart.vue';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2422,6 +2428,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logout.vue */ "./resources/js/components/partials/logout.vue");
+//
+//
 //
 //
 //
@@ -2608,6 +2616,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7172,7 +7185,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "h2[data-v-3bd692e4] {\n  text-align: center;\n}\n#row[data-v-3bd692e4] {\n  margin-top: 40px;\n}\n@media screen and (min-width: 760px) {\n#row[data-v-3bd692e4] {\n    margin-top: 40px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n            flex-direction: row;\n    justify-content: space-around;\n}\n.rowDiv[data-v-3bd692e4] {\n    margin-bottom: 40px;\n}\n}", ""]);
+exports.push([module.i, "h2[data-v-3bd692e4] {\n  text-align: center;\n}\n#row[data-v-3bd692e4] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  -webkit-box-pack: center;\n          justify-content: center;\n  align-content: center;\n  margin-top: 40px !important;\n  margin: 0 auto;\n}\n@media screen and (min-width: 760px) {\n#row[data-v-3bd692e4] {\n    margin-top: 40px;\n    margin: 5px;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n            flex-direction: row;\n    justify-content: space-around;\n}\n.rowDiv[data-v-3bd692e4] {\n    margin-bottom: 40px;\n}\n}", ""]);
 
 // exports
 
@@ -39964,28 +39977,70 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { attrs: { id: "listingInfo" } }, [
-        _c("div", [
-          _c("h2", [_vm._v(_vm._s(_vm.moreInfo[0].name))]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("$" + _vm._s(_vm.moreInfo[0].price))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.moreInfo[0].address))]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("Profit Margin: " + _vm._s(_vm.moreInfo[0].profit) + "%")
-          ])
-        ]),
+        _c(
+          "div",
+          [
+            _c("h2", [_vm._v(_vm._s(_vm.moreInfo[0].name))]),
+            _vm._v(" "),
+            _c("h3", [_vm._v("$" + _vm._s(_vm.moreInfo[0].price))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.moreInfo[0].address))]),
+            _vm._v(" "),
+            [
+              _c("div", [
+                "" + _vm.moreInfo[0].profit >= 20
+                  ? _c("p", [
+                      _vm._v(
+                        "Profit Margin: " +
+                          _vm._s(_vm.moreInfo[0].profit) +
+                          " % "
+                      ),
+                      _vm._m(0)
+                    ])
+                  : _c("p", { attrs: { id: "red" } }, [
+                      _vm._v(
+                        "Profit Margin: " +
+                          _vm._s(_vm.moreInfo[0].profit) +
+                          " % "
+                      ),
+                      _vm._m(1)
+                    ])
+              ])
+            ]
+          ],
+          2
+        ),
         _vm._v(" "),
         _c("img", { attrs: { src: "/images/" + _vm.moreInfo[0].img, alt: "" } })
       ]),
       _vm._v(" "),
       _c("div", [_c("p", [_vm._v(_vm._s(_vm.moreInfo[0].content))])]),
       _vm._v(" "),
-      _vm._m(0)
+      _vm._m(2)
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [
+      _c("img", {
+        attrs: { src: "images/good.svg", alt: "Green Thumbs Up Icon" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [
+      _c("img", {
+        attrs: { src: "images/bad.svg", alt: "Red Thumbs Down Icon" }
+      })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -40162,7 +40217,7 @@ var render = function() {
   return _c(
     "button",
     { attrs: { type: "button" }, on: { click: _vm.logoutUser } },
-    [_vm._v("LOGOUT")]
+    [_vm._v("Logout")]
   )
 }
 var staticRenderFns = []
@@ -40195,8 +40250,8 @@ var render = function() {
         _c("router-link", { attrs: { to: "/" } }, [
           _c("img", {
             attrs: {
-              src: "/images/bn_icon_1.svg",
-              alt: "Royal Hunt Logo",
+              src: "images/bizznet_logo.svg",
+              alt: "Bizz.net logo",
               id: "logo"
             }
           })
@@ -40208,15 +40263,17 @@ var render = function() {
           _c("ul", [
             _c(
               "li",
-              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("LISTINGS")])],
+              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Listings")])],
               1
             ),
+            _vm._v(" "),
+            _vm._m(0),
             _vm._v(" "),
             _c(
               "li",
               [
                 _c("router-link", { attrs: { to: "/create" } }, [
-                  _vm._v("CREATE LISTING")
+                  _vm._v("Create Listing")
                 ])
               ],
               1
@@ -40227,7 +40284,7 @@ var render = function() {
               { attrs: { id: "buffer" } },
               [
                 _c("router-link", { attrs: { to: "/settings" } }, [
-                  _vm._v("SETTINGS")
+                  _vm._v("Settings")
                 ])
               ],
               1
@@ -40291,9 +40348,11 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("LISTINGS")]
+                  [_vm._v("Listings")]
                 )
               ]),
+              _vm._v(" "),
+              _vm._m(1),
               _vm._v(" "),
               _c("li", [
                 _c(
@@ -40306,7 +40365,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("CREATE LISTING")]
+                  [_vm._v("Create Listing")]
                 )
               ]),
               _vm._v(" "),
@@ -40321,7 +40380,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("SETTINGS")]
+                  [_vm._v("Settings")]
                 )
               ]),
               _vm._v(" "),
@@ -40334,7 +40393,20 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Chat")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Chat")])])
+  }
+]
 render._withStripped = true
 
 

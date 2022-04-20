@@ -32,15 +32,15 @@
 </head>
 <body>
     <header id="mainHead">
-        <a href="/"><img src="/images/bn_icon_1.svg" alt="Royal Hunt Logo" id="logo" ></a>
+        <a href="/"><img src="/images/bizznet_logo.svg" alt="Bizz.net logo" id="logo" ></a>
 
         <!-- desktop nav -->
         <nav id="mainNav">
             <h2 class="hidden">Main Navigation</h2>
             <ul>
-                <li><a href="/listings">LISTINGS</a></li>
-                <li><a href="/register">SIGN UP</a></li>
-                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/listings">Listings</a></li>
+                <li><a href="/register">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </nav>
 
@@ -52,9 +52,9 @@
             <a href="javascript:void(0)"class="closebtn" onclick="hideNav()">&times;</a>
             <div class="overlay-con">
                 <ul>
-                    <li><a href="/listings">LISTINGS</a></li>
-                    <li><a href="/register">SIGN UP</a></li>
-                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/listings">Listings</a></li>
+                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/login">Login</a></li>
                 </ul>
             </div>
         </div>

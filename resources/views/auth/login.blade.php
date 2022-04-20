@@ -1,13 +1,15 @@
 @extends('layouts.auth')
 
 @section('content')
-<section class="landing">
+<!-- <section class="landing">
     <h2>Find Your Next Venture Capital Project Today!</h2>
     <p>Explore 10,000+ businesses for sale across North America.</p>
-</section>
+</section> -->
 
 <div id="authCon">
-    <h2>LOGIN</h2>
+    <h2>Account Login</h2>
+    <br>
+    <p>Enter your account credentials below</p>
     <div id="mainFormCon">
         <form method="POST" action="{{ route('login') }}">
             @csrf

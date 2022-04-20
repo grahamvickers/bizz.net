@@ -1,7 +1,7 @@
 logout.vue =
 
 <template>
-    <button type="button"  @click="logoutUser">LOGOUT</button>
+    <button type="button"  @click="logoutUser">Logout</button>
 </template>
 
 <script>

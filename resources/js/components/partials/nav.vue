@@ -1,7 +1,7 @@
 <template>
     <div>
       <header id="mainHead"> 
-        <router-link to="/"><img src="/images/bn_icon_1.svg" alt="Royal Hunt Logo" id="logo" ></router-link>
+        <router-link to="/"><img src="images/bizznet_logo.svg" alt="Bizz.net logo" id="logo" ></router-link>
 
 
         <!-- desktop nav -->
@@ -9,9 +9,10 @@
             <h2 class="hidden">Main Navigation</h2>
             <ul>
                 
-                <li><router-link to="/">LISTINGS</router-link></li>
-                <li><router-link to="/create">CREATE LISTING</router-link></li>
-                <li id="buffer"><router-link to="/settings">SETTINGS</router-link></li>
+                <li><router-link to="/">Listings</router-link></li>
+                <li><a href="#">Chat</a></li>
+                <li><router-link to="/create">Create Listing</router-link></li>
+                <li id="buffer"><router-link to="/settings">Settings</router-link></li>
                 <li><logout /></li>
             </ul>
         </nav>
@@ -25,9 +26,10 @@
             
             <div class="overlay-con">
                 <ul>
-                    <li><a href="/listings" @click="hideNav()">LISTINGS</a></li>
-                    <li><a href="/listings#/create" @click="hideNav()">CREATE LISTING</a></li>
-                    <li><a href="/listings#/settings" @click="hideNav()">SETTINGS</a></li>
+                    <li><a href="/listings" @click="hideNav()">Listings</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="/listings#/create" @click="hideNav()">Create Listing</a></li>
+                    <li><a href="/listings#/settings" @click="hideNav()">Settings</a></li>
                     <li ><logout id="mobileBtn"/></li>
                     
                 </ul>
