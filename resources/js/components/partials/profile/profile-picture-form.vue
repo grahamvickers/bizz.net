@@ -4,12 +4,12 @@
         <h3>Profile Picture</h3>
 
         <div>
-            <template v-if="hasAvatar">
+            <template v-if="hasProfilePicture">
                 <div class="avatar" :style="{'background': `url(${user.avatar_uri})`}"></div>
                 <button
                     type="button"
                     class="button"
-                    @click="removeAvatar"
+                    @click="deleteProfilePicture"
                     :disabled="processing"    
                 >
                     {{ processing ? 'Processing...' : 'Remove Photo'}}
@@ -53,7 +53,7 @@
                 return this.$store.state.user;
             },
 
-            hasAvatar() {
+            hasProfilePicture() {
                 return this.user
                     ? this.user.has_avatar
                     : false;
@@ -78,7 +78,7 @@
                     });
             },
 
-            removeAvatar() {
+            deleteProfilePicture() {
                 this.processing = true;
 
                 axios.patch(`/api/users/${this.user.id}`, {'remove_avatar': true})

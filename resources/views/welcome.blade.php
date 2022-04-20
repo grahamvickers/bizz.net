@@ -41,7 +41,8 @@
 
     <section id="signUp">
         <div id="signUpCon">
-            <h2>Join the thousands of satisfied investors now</h2>
+            <h3>Join the thousands of satisfied investors today!</h3>
+            <!-- <p>Start a free trial to see why we are the #1 business marketplace</p> -->
             <a class="button" href="/register">JOIN NOW</a>
         </div>
         <img src="/images/join_1.jpg" alt="JOIN NOW">

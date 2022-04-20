@@ -30,8 +30,8 @@
                     <!-- <p class="profit">Profit Margin: {{listing.profit}} %</p> -->
                      <template>
                         <div>
-                        <p v-if="`${listing.profit}` >= 20">Profit Margin: {{listing.profit}} % &#128077;</p>
-                        <p v-else id="red">Profit Margin: {{listing.profit}} % &#128078;</p>
+                        <p v-if="`${listing.profit}` >= 20">Profit Margin: {{listing.profit}} % <span><img src="images/good.svg" alt="Green Thumbs Up Icon"></span></p>
+                        <p v-else id="red">Profit Margin: {{listing.profit}} % <span><img src="images/bad.svg" alt="Red Thumbs Down Icon"></span></p>
                         </div>
                     </template>
                 </div>

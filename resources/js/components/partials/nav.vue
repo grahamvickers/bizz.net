@@ -22,6 +22,7 @@
         <div id="navOverCon" class="overlay">
             <h2 class="hidden">Main Navigation</h2>
             <a  class="closebtn" @click="hideNav()">&times;</a>
+            
             <div class="overlay-con">
                 <ul>
                     <li><a href="/listings" @click="hideNav()">LISTINGS</a></li>

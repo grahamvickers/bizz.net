@@ -16,7 +16,8 @@
           <div>
             <h2 >{{moreInfo[0].name}}</h2>
             <h3>${{moreInfo[0].price}}</h3>
-            <h3>{{moreInfo[0].address}}</h3>
+            <p>{{moreInfo[0].address}}</p>
+            <p>Profit Margin: {{moreInfo[0].profit}}%</p>
           </div>
 
           <img :src="`/images/${moreInfo[0].img}`" alt="">
@@ -25,11 +26,13 @@
         <div>
           <p>{{moreInfo[0].content}}</p>
         </div>
+        
+        <!-- <div>
+          <canvas id="chart" width="400px" height="400px"></canvas>
+        </div> -->
 
         <!-- <div>
-          <div>
-            <canvas id="myChart" min-width="300px" min-height="400px"></canvas>
-          </div>
+          <listing-chart />
         </div> -->
 
         <div>
@@ -45,12 +48,17 @@
 
 
 <script>
+  // import ListingChart from './partials/listing-chart.vue';
+ 
   export default {
     data() {
       return {
         moreInfo: {},
       }
     },
+    // components: {
+    //   ListingChart
+    // },
     created() {
       let vm = this;
       let id = this.$route.params.id;
@@ -64,48 +72,49 @@
       .then(function(data){
         vm.moreInfo = data;
       })
-
-
-      module.export = this.createChart;
     },
-    methods: {
-        // createChart() {
-        //    const ctx = document.getElementById('myChart').getContext('2d');
-        //     const myChart = new Chart(ctx, {
-        //         type: 'bar',
-        //         data: {
-        //             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        //             datasets: [{
-        //                 label: '# of Votes',
-        //                 data: [12, 19, 3, 5, 2, 3],
-        //                 backgroundColor: [
-        //                     'rgba(255, 99, 132, 0.2)',
-        //                     'rgba(54, 162, 235, 0.2)',
-        //                     'rgba(255, 206, 86, 0.2)',
-        //                     'rgba(75, 192, 192, 0.2)',
-        //                     'rgba(153, 102, 255, 0.2)',
-        //                     'rgba(255, 159, 64, 0.2)'
-        //                 ],
-        //                 borderColor: [
-        //                     'rgba(255, 99, 132, 1)',
-        //                     'rgba(54, 162, 235, 1)',
-        //                     'rgba(255, 206, 86, 1)',
-        //                     'rgba(75, 192, 192, 1)',
-        //                     'rgba(153, 102, 255, 1)',
-        //                     'rgba(255, 159, 64, 1)'
-        //                 ],
-        //                 borderWidth: 1
-        //             }]
-        //         },
-        //         options: {
-        //             scales: {
-        //                 y: {
-        //                     beginAtZero: true
-        //                 }
-        //             }
-        //         }
-        //     });
-        // }
+    mounted() { 
+      // let vm = this;
+
+      // setTimeout(() => {
+      //     const ctx = document.getElementById('chart').getContext('2d');
+      //     const myChart = new Chart(ctx, {
+      //         type: 'bar',
+      //         data: {
+      //             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      //             datasets: [{
+      //                 label: '# of Votes',
+      //                 data: [12, 19, 3, 5, 2, 3],
+      //                 backgroundColor: [
+      //                     'rgba(255, 99, 132, 0.2)',
+      //                     'rgba(54, 162, 235, 0.2)',
+      //                     'rgba(255, 206, 86, 0.2)',
+      //                     'rgba(75, 192, 192, 0.2)',
+      //                     'rgba(153, 102, 255, 0.2)',
+      //                     'rgba(255, 159, 64, 0.2)'
+      //                 ],
+      //                 borderColor: [
+      //                     'rgba(255, 99, 132, 1)',
+      //                     'rgba(54, 162, 235, 1)',
+      //                     'rgba(255, 206, 86, 1)',
+      //                     'rgba(75, 192, 192, 1)',
+      //                     'rgba(153, 102, 255, 1)',
+      //                     'rgba(255, 159, 64, 1)'
+      //                 ],
+      //                 borderWidth: 1
+      //             }]
+      //         },
+      //         options: {
+      //             scales: {
+      //                 y: {
+      //                     beginAtZero: true
+      //                 }
+      //             }
+      //         }
+      //     });
+        
+      //   }, 1000);
+        
     }
     
   }
@@ -122,11 +131,11 @@ h2,h3{
 }
 
 #green{
-  color: rgb(91, 184, 108);
+  color: #4FC666;
 }
 
 #red{
-  color: rgb(201, 63, 63);
+  color: #D05656;
 }
 
 @media screen and (min-width: 780px) {
