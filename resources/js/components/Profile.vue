@@ -3,13 +3,13 @@
         <section id="contentCon">
             <h2>Edit Profile</h2>
 
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="mt-3">
-                        <password-form />
-                    </div>
+            <div id="row">
+
+                <div>
+                    <password-form />
                 </div>
-                <div class="col-md-5">
+
+                <div >
                     <avatar-form />
                 </div>
             </div>
@@ -29,3 +29,21 @@
         }
     };
 </script>
+
+<style lang="scss">
+#row{
+    margin-top: 40px;
+}
+@media screen and (min-width: 760px) {
+    #row{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    .rowDiv{
+        margin-bottom: 40px;
+    }
+}
+</style>

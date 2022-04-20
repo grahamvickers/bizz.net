@@ -28,7 +28,7 @@ button{
     color: #615CF2;
     font-size: 18px;
     line-height: 28px;
-    margin-left: 20px;
+    // margin-left: 20px;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     transition: .2s ease-in-out;

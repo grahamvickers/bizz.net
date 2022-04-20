@@ -1,25 +1,11 @@
 <template>
-    <div class="card">
-        <div class="card-header">
+    <div id="pwordCon">
+        <div>
             <h3>Change Password</h3>
-            <button
-                type="button"
-                class="button"
-                @click="showPasswords = !showPasswords"
-                >
-                <template v-if="showPasswords">
-                    <span class="fa fa-eye"></span>
-                        Hide passwords
-                </template>
-                <template v-else>
-                    <span class="fa fa-eye-slash"></span>
-                    Show passwords
-                </template>
-            </button>
         </div>
-        <div class="card-body">
+        <div>
             <form id="password-form">
-                <div class="form-group">
+                <div class="formItemCon">
                     <label for="password">Current Password *</label>
                     <input
                         :type="showPasswords ? 'text' : 'password'"
@@ -29,7 +15,8 @@
                         v-model="currentPassword"
                     />
                 </div>
-                <div class="form-group">
+
+                <div class="formItemCon">
                     <label for="new_password">New Password *</label>
                     <input
                         :type="showPasswords ? 'text' : 'password'"
@@ -39,7 +26,8 @@
                         v-model="newPassword"
                     />
                 </div>
-                <div class="form-group">
+
+                <div class="formItemCon">
                     <label for="new_password_confirm">Confirm New Password *</label>
                     <input
                         :type="showPasswords ? 'text' : 'password'"
@@ -49,12 +37,29 @@
                         v-model="confirmPassword"
                     />
                 </div>
+
+                <button
+                    type="button"
+                    class="button"
+                    @click="showPasswords = !showPasswords"
+                >
+                    <template v-if="showPasswords">
+                        <span class="fa fa-eye"></span>
+                            Hide
+                    </template>
+                    <template v-else>
+                        <span class="fa fa-eye-slash"></span>
+                        Show 
+                    </template>
+                </button>
                 <div v-if="errors" class="alert alert-danger">
                     <p class="alert-heading h4">There were some issues updating your password.</p>
                     <p v-for="(error, index) in errors" class="mb-0" :key="`errors-${index}`">
                         {{ error[0] }}
                     </p>
                 </div>
+
+
                 <button type="button" class="button" @click="submit" :disabled="processing">
                     {{ processing ? 'Processing...' : 'Update' }}
                 </button>
@@ -105,3 +110,9 @@
         }
     }
 </script>
+
+<style lang="scss">
+#pwordCon{
+    margin-bottom: 40px ;
+}
+</style>
