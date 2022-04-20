@@ -21,8 +21,8 @@
                     <input type="hidden" name="upload_avatar" value="1" />
 
                     <div class="formItemCon">
-                        <label for="avatar" id="chooseFile">Avatar *</label>
-                        <input type="file" class="form-control" name="avatar" id="avatar" />
+                        <label for="avatar" id="chooseFile">Add Avatar</label>
+                        <input type="file" name="avatar" id="avatar" />
                     </div>
 
 

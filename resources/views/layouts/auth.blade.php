@@ -45,7 +45,7 @@
         </nav>
 
         <!-- hambuger nav -->
-        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" onclick="showNav()">&#9776; </span>
+        <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #3C35F2;" onclick="showNav()"><img src="images/nav_btn.svg" alt="Navigation Button - Click to expand"></span>
 
         <div id="navOverCon" class="overlay">
             <h2 class="hidden">Main Navigation</h2>

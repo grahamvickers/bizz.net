@@ -30,7 +30,10 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+h2{
+    text-align: center;
+}
 #row{
     margin-top: 40px;
 }

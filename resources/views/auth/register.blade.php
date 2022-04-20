@@ -7,9 +7,9 @@
     <p>Explore 10,000+ businesses for sale across North America.</p>
 </section>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+    <div>
+        <div>
+            <div>
                 <h2>Register a New Account</h2>
 
                 <div id="mainFormCon">
