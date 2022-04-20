@@ -54,8 +54,8 @@
         </div> -->
 
         <div id="downloads">
-          <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Income Sheet</span></button>
-          <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Balance Sheet</span></button>
+          <a href="./public/sheets/2021_income_sheet.pdf" download class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Income Sheet</span></a>
+          <a href="./public/sheets/2021_balance_sheet.pdf" download class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Balance Sheet</span></a>
         </div>
 
         <div>
