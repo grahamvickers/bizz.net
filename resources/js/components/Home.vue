@@ -73,7 +73,7 @@
                 searchString = searchString.trim().toLowerCase();
 
                 listing_array = listing_array.filter(function(listing) {
-                    console.log(listing.name.toLowerCase().indexOf(searchString));
+                    console.log(listing.city.toLowerCase().indexOf(searchString));
                     if(listing.city.toLowerCase().indexOf(searchString) !== -1) {
                         return listing;
                     }

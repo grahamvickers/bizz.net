@@ -138,28 +138,28 @@
 
                     <div>
                         <div class="formItemCon">
-                            <label for="2021_revenue">2021 Revenue $*</label>
-                            <input type="text" name="2021_revenue" id="2021_revenue">
+                            <label for="one">2021 Revenue $*</label>
+                            <input type="text" name="one" id="one">
                         </div>
 
                         <div class="formItemCon">
-                            <label for="2020_revenue">2020 Revenue $*</label>
-                            <input type="text" name="2020_revenue" id="2020_revenue">
+                            <label for="two">2020 Revenue $*</label>
+                            <input type="text" name="two" id="two">
                         </div> 
 
                         <div class="formItemCon">
-                            <label for="2019_revenue">2019 Revenue $</label>
-                            <input type="text" name="2019_revenue" id="2019_revenue">
+                            <label for="three">2019 Revenue $</label>
+                            <input type="text" name="three" id="three">
                         </div> 
 
                         <div class="formItemCon">
-                            <label for="2018_revenue">2018 Revenue $</label>
-                            <input type="text" name="2018_revenue" id="2018_revenue">
+                            <label for="four">2018 Revenue $</label>
+                            <input type="text" name="four" id="four">
                         </div> 
 
                         <div class="formItemCon">
-                            <label for="2017_revenue">2017 Revenue $</label>
-                            <input type="text" name="2017_revenue" id="2017_revenue">
+                            <label for="five">2017 Revenue $</label>
+                            <input type="text" name="five" id="five">
 
                         </div>
                     </div>
@@ -191,6 +191,11 @@ export default {
             income: null,
             img: null,
             content: null,
+            one: null,
+            two: null,
+            three: null,
+            four: null,
+            five: null,
             processing: false,
             errors: null
         }

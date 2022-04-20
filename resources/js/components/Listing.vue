@@ -2,7 +2,7 @@
     <div>
       <section id="contentCon">
         <h1 class="hidden" >Selected Listing Page - now showing {{moreInfo[0].name}}</h1>
-
+        <!-- <p>listings/{{moreInfo[0].name}}</p> -->
         <div>
           <template>
             <div>
@@ -20,8 +20,8 @@
             <!-- <p>Profit Margin: {{moreInfo[0].profit}}%</p> -->
             <template>
                 <div>
-                  <p v-if="`${moreInfo[0].profit}` >= 20">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/good.svg" alt="Green Thumbs Up Icon"></span></p>
-                  <p v-else id="red">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/bad.svg" alt="Red Thumbs Down Icon"></span></p>
+                  <p  v-if="`${moreInfo[0].profit}` >= 20">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/good.svg" alt="Green Thumbs Up Icon"></span></p>
+                  <p v-else >Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/bad.svg" alt="Red Thumbs Down Icon"></span></p>
                 </div>
             </template>
             <div>
@@ -48,13 +48,19 @@
         <!-- <div>
           <listing-chart />
         </div> -->
+        
+        <!-- <div>
+          <listing-bar-chart />
+        </div> -->
 
-        <div>
+        <div id="downloads">
           <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Income Sheet</span></button>
           <button class="downloadBtn"><span><img src="images/download.svg" alt="download icon">Balance Sheet</span></button>
         </div>
 
-        
+        <div>
+          <router-link id="center" class="button" to="/">View All Listings</router-link>
+        </div>
       </section>
 
     </div>
@@ -63,6 +69,7 @@
 
 <script>
   // import ListingChart from './partials/listing-chart.vue';
+  // import ListingBarChart from './partials/listing-bar-chart.vue';
  
   export default {
     data() {
@@ -70,9 +77,10 @@
         moreInfo: {},
       }
     },
-    // components: {
-    //   ListingChart
-    // },
+    components: {
+      // ListingChart,
+      // ListingBarChart
+    },
     created() {
       let vm = this;
       let id = this.$route.params.id;
@@ -136,6 +144,12 @@
 
 <style lang="scss" scoped>
 
+#center{
+  display: flex;
+  justify-content: center;
+  // margin: 0 auto;
+  margin-top: 30px;
+}
 #image{
   width: 300px;
   height: 220px;
@@ -144,6 +158,10 @@
   background-position: center !important;
   background-repeat: no-repeat !important;
   margin-top: 30px;
+}
+
+#downloads{
+  margin-top: 20px;
 }
 #contentCon{
   div{
@@ -172,6 +190,12 @@ h2,h3{
       margin-top: 0;
 
     }
+  }
+
+  #center{
+    display: flex;
+    justify-content: center;
+    // margin: 0 auto;
   }
 }
 </style>

@@ -2089,6 +2089,11 @@ __webpack_require__.r(__webpack_exports__);
       income: null,
       img: null,
       content: null,
+      one: null,
+      two: null,
+      three: null,
+      four: null,
+      five: null,
       processing: false,
       errors: null
     };
@@ -2207,7 +2212,7 @@ __webpack_require__.r(__webpack_exports__);
 
       searchString = searchString.trim().toLowerCase();
       listing_array = listing_array.filter(function (listing) {
-        console.log(listing.name.toLowerCase().indexOf(searchString));
+        console.log(listing.city.toLowerCase().indexOf(searchString));
 
         if (listing.city.toLowerCase().indexOf(searchString) !== -1) {
           return listing;
@@ -2292,16 +2297,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 // import ListingChart from './partials/listing-chart.vue';
+// import ListingBarChart from './partials/listing-bar-chart.vue';
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       moreInfo: {}
     };
   },
-  // components: {
-  //   ListingChart
-  // },
+  components: {// ListingChart,
+    // ListingBarChart
+  },
   created: function created() {
     var vm = this;
     var id = this.$route.params.id; // console.log(id);
@@ -7155,7 +7167,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#image[data-v-0a55fc2e] {\n  width: 300px;\n  height: 220px;\n  border-radius: 5px;\n  background-size: cover !important;\n  background-position: center !important;\n  background-repeat: no-repeat !important;\n  margin-top: 30px;\n}\n#contentCon div[data-v-0a55fc2e] {\n  margin-bottom: 10px;\n}\nh2[data-v-0a55fc2e], h3[data-v-0a55fc2e] {\n  margin-bottom: 15px;\n}\n#green[data-v-0a55fc2e] {\n  color: #4FC666;\n}\n#red[data-v-0a55fc2e] {\n  color: #D05656;\n}\n@media screen and (min-width: 780px) {\n#listingInfo[data-v-0a55fc2e] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n            flex-direction: row-reverse;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n}\n#listingInfo #image[data-v-0a55fc2e] {\n    margin-right: 30px;\n    margin-top: 0;\n}\n}", ""]);
+exports.push([module.i, "#center[data-v-0a55fc2e] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  margin-top: 30px;\n}\n#image[data-v-0a55fc2e] {\n  width: 300px;\n  height: 220px;\n  border-radius: 5px;\n  background-size: cover !important;\n  background-position: center !important;\n  background-repeat: no-repeat !important;\n  margin-top: 30px;\n}\n#downloads[data-v-0a55fc2e] {\n  margin-top: 20px;\n}\n#contentCon div[data-v-0a55fc2e] {\n  margin-bottom: 10px;\n}\nh2[data-v-0a55fc2e], h3[data-v-0a55fc2e] {\n  margin-bottom: 15px;\n}\n#green[data-v-0a55fc2e] {\n  color: #4FC666;\n}\n#red[data-v-0a55fc2e] {\n  color: #D05656;\n}\n@media screen and (min-width: 780px) {\n#listingInfo[data-v-0a55fc2e] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: reverse;\n            flex-direction: row-reverse;\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n}\n#listingInfo #image[data-v-0a55fc2e] {\n    margin-right: 30px;\n    margin-top: 0;\n}\n#center[data-v-0a55fc2e] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n}\n}", ""]);
 
 // exports
 
@@ -39717,53 +39729,33 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", [
         _c("div", { staticClass: "formItemCon" }, [
-          _c("label", { attrs: { for: "2021_revenue" } }, [
-            _vm._v("2021 Revenue $*")
-          ]),
+          _c("label", { attrs: { for: "one" } }, [_vm._v("2021 Revenue $*")]),
           _vm._v(" "),
-          _c("input", {
-            attrs: { type: "text", name: "2021_revenue", id: "2021_revenue" }
-          })
+          _c("input", { attrs: { type: "text", name: "one", id: "one" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "formItemCon" }, [
-          _c("label", { attrs: { for: "2020_revenue" } }, [
-            _vm._v("2020 Revenue $*")
-          ]),
+          _c("label", { attrs: { for: "two" } }, [_vm._v("2020 Revenue $*")]),
           _vm._v(" "),
-          _c("input", {
-            attrs: { type: "text", name: "2020_revenue", id: "2020_revenue" }
-          })
+          _c("input", { attrs: { type: "text", name: "two", id: "two" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "formItemCon" }, [
-          _c("label", { attrs: { for: "2019_revenue" } }, [
-            _vm._v("2019 Revenue $")
-          ]),
+          _c("label", { attrs: { for: "three" } }, [_vm._v("2019 Revenue $")]),
           _vm._v(" "),
-          _c("input", {
-            attrs: { type: "text", name: "2019_revenue", id: "2019_revenue" }
-          })
+          _c("input", { attrs: { type: "text", name: "three", id: "three" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "formItemCon" }, [
-          _c("label", { attrs: { for: "2018_revenue" } }, [
-            _vm._v("2018 Revenue $")
-          ]),
+          _c("label", { attrs: { for: "four" } }, [_vm._v("2018 Revenue $")]),
           _vm._v(" "),
-          _c("input", {
-            attrs: { type: "text", name: "2018_revenue", id: "2018_revenue" }
-          })
+          _c("input", { attrs: { type: "text", name: "four", id: "four" } })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "formItemCon" }, [
-          _c("label", { attrs: { for: "2017_revenue" } }, [
-            _vm._v("2017 Revenue $")
-          ]),
+          _c("label", { attrs: { for: "five" } }, [_vm._v("2017 Revenue $")]),
           _vm._v(" "),
-          _c("input", {
-            attrs: { type: "text", name: "2017_revenue", id: "2017_revenue" }
-          })
+          _c("input", { attrs: { type: "text", name: "five", id: "five" } })
         ])
       ])
     ])
@@ -40005,7 +39997,7 @@ var render = function() {
                       ),
                       _vm._m(0)
                     ])
-                  : _c("p", { attrs: { id: "red" } }, [
+                  : _c("p", [
                       _vm._v(
                         "Profit Margin: " +
                           _vm._s(_vm.moreInfo[0].profit) +
@@ -40029,7 +40021,19 @@ var render = function() {
       _vm._v(" "),
       _c("div", [_c("p", [_vm._v(_vm._s(_vm.moreInfo[0].content))])]),
       _vm._v(" "),
-      _vm._m(3)
+      _vm._m(3),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c(
+            "router-link",
+            { staticClass: "button", attrs: { id: "center", to: "/" } },
+            [_vm._v("View All Listings")]
+          )
+        ],
+        1
+      )
     ])
   ])
 }
@@ -40088,7 +40092,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { attrs: { id: "downloads" } }, [
       _c("button", { staticClass: "downloadBtn" }, [
         _c("span", [
           _c("img", {
