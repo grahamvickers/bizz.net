@@ -75,11 +75,10 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
   text-align: left;
   align-content: flex-start;
-  margin: 0 auto;
 }
 
 #authCon {

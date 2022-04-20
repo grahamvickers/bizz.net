@@ -72,6 +72,10 @@
                 </div>
             </div>
         </form>
+        <br>
+        <div id="loginRegister">
+            <p>Already have an account? Click <a href="/login">HERE</a> to sign in</p>
+        </div>
     </div>
 </div>
 

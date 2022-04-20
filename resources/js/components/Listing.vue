@@ -17,7 +17,13 @@
             <h2 >{{moreInfo[0].name}}</h2>
             <h3>${{moreInfo[0].price}}</h3>
             <p>{{moreInfo[0].address}}</p>
-            <p>Profit Margin: {{moreInfo[0].profit}}%</p>
+            <!-- <p>Profit Margin: {{moreInfo[0].profit}}%</p> -->
+            <template>
+                <div>
+                  <p v-if="`${moreInfo[0].profit}` >= 20">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/good.svg" alt="Green Thumbs Up Icon"></span></p>
+                  <p v-else id="red">Profit Margin: {{moreInfo[0].profit}} % <span><img src="images/bad.svg" alt="Red Thumbs Down Icon"></span></p>
+                </div>
+            </template>
           </div>
 
           <img :src="`/images/${moreInfo[0].img}`" alt="">
