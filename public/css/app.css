@@ -56,6 +56,52 @@ p {
   cursor: pointer;
 }
 
+.buttonIcons {
+  text-decoration: none;
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  background: #615CF2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px !important;
+  text-align: center;
+  color: #F2F2F2;
+  max-width: 70px;
+}
+
+.buttonIcons img {
+  margin: none !important;
+}
+
+.buttonIcons:hover {
+  cursor: pointer;
+}
+
+.downloadBtn {
+  text-decoration: none;
+  font-family: niveau-grotesk, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  background: #615CF2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px !important;
+  text-align: center;
+  color: #F2F2F2;
+  max-width: 250px;
+}
+
+.downloadBtn img {
+  margin-right: 10px;
+}
+
+.downloadBtn:hover {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
